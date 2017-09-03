@@ -1,0 +1,88 @@
+/*Background video*/ 
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Sitka Text, "Open-sans", sans-serif;
+  color: #222;
+  font-size: 18px;
+  margin: 0;
+  background: #333f54;
+}
+.main-header, .current-train-schedule, .add-train {
+  /*margin-left: 50px;*/
+  background: #f4fffa;
+  opacity: 0.95;
+  border: 2px solid black;
+}
+.main-header {
+  margin-top: 40px;
+  background: #333f54;
+  color: white;
+}
+.current-train-schedule,.add-train {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.add-train {
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+#new-train-message {
+  color: green;
+  margin-bottom: 5px;
+  font-weight: bold;
+  padding-top: 10px;
+  font-size: 14px;
+}
+h3 {
+  margin-top: 5px;
+}
+#add-train-btn {
+  color: #f4fffa;
+  background: #333f54;
+}
+#train-name-input, #destination-input, #first-train-input, #frequency-input {
+  font-size: 18px;
+}
+#add-train-btn {
+  font-size: 18px;  
+}
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url("../images/train.jpg") center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+}

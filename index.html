@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Train</title>
+	<!-- Flexbox -->
+	<link rel="stylesheet" type="text/css" href="assets/css/flexboxgrid.css">
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	 <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+<a name="top"></a>
+<div class="container">
+	<div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="fullscreen-bg">
+			    <video loop muted autoplay poster="assets/images/train.jpg" class="fullscreen-bg__video">
+			        <source src="assets/images/train.webm" type="video/webm">
+			        <source src="assets/images/train.mp4" type="video/mp4">
+			        <source src="assets/images/train.ogv" type="video/ogg">
+			    </video>
+			</div>
+		</div>
+	</div>
+
+	<section class="main-header">
+		<div class="container">
+			<div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        			<h1>Snowland Train Schedule</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="current-train-schedule">
+		<div class="container">
+			<div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-8">
+				<p id="new-train-message">&nbsp;</p>
+              		<h3>Current Train Schedule</h3>
+              		<table class="table table-hover" id="train-table">
+						<thead>
+							<tr>
+								<th>Train</th>
+								<th>Destination</th>
+								<th>Frequency(min)</th>
+								<th>Next Arrival</th>
+								<th>Minutes Away</th>
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="add-train">
+		<div class="container">
+			<div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-7">
+					<h3>Add Train</h3>
+					<form>
+						<div class="form-group">
+							<label for="train-name-input">Train Name</label>
+							<input class="form-control" id="train-name-input" type="text">
+						</div>
+						<div class="form-group">
+							<label for="destination-input">Destination</label>
+							<input class="form-control" id="destination-input" type="text">
+						</div>
+						<div class="form-group">
+							<label for="first-train-input">First Train (HH:mm - military time)</label>
+							<input class="form-control" id="first-train-input" type="text">
+						</div>
+						<div class="form-group">
+							<label for="frequency-input">Frequency(min)</label>
+							<input class="form-control" id="frequency-input" type="text">
+						</div>
+                		<button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+			
+<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
